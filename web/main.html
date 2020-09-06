@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Nikita Yaskin SoftWare</title>
+  <title>Yaskin Nikita SoftWare</title>
   <script src="eel.js"></script>
   <link rel="icon" type="image/png" href="/favicon.png">
   <style>@import "/style/main.css" screen;</style>
@@ -11,26 +11,19 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script> 
-  	function loaddata(){
+  	function load(){
   		eel.load()
   	}
-// Add callbacks to get return
+  	eel.expose(addTable);
+
     function addTable(param) {
-        var tableRef = document.getElementByClass('client-data').getElementsByTagName('tbody')[0];
-		// Insert a row in the table at the last row
-		var newRow   = tableRef.insertRow();
-
-		// Insert a cell in the row at index 0
-		var newCell  = newRow.insertCell(0);
-
-		// Append a text node to the cell
-		var newText  = document.createTextNode(param);
-		newCell.appendChild(newText);
+		var table = document.getElementsByTagName('tbody')[0];
+		var row = table.insertRow(0);
+		row.innerHTML = param;
     } 
-    eel.expose(addTable);
   </script> 
 </head>
-<body onload="loaddata()">
+<body onload="load()">
 	<header><h1>Вітаю вас, Нікіта!</h1></header>
 	<div class="container">
 		<table class="table">
@@ -53,7 +46,7 @@
 	<footer>
 		<div class="inputs">
 			<a type="button" class="btn btn-light" id="new-client" href="new-client.html">Ввести нового клієнта</a>
-			<a type="button" class="btn btn-light" id="edit-client" href="edit-client.html">Змінити інформацію про клієнта</a>
+			<a type="button" class="btn btn-light" id="edit-client" href="new-client.html">Змінити інформацію про клієнта</a>
 			<a type="button" class="btn btn-light" id="remove-client" href="remove-client.html">Видалити клієнта</a>
 		</div>
 		<div class="counters">
