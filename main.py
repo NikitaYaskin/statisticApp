@@ -10,16 +10,14 @@ def connect():
     conn.close()
 
 def createTable(mess):
-    line = []
     for k, v in mess.items():
-        line.append('</td><td>'.join(map(str, v)))
-    print('<tr><td>' + str(line[0]) + '</td></tr><tr><td>' + str(line[1]) + '</td></tr>')
-    eel.addTable('<td>' + str(line[0]) + '</td>')
+        row = '<tr><td>' + str('</td><td>'.join(map(str, v))) + '</td><input type="checkbox"></tr>'
+        eel.addTable(row)
+    
 
 @eel.expose
 def load():
     a = connect()
-    print(a)
     createTable(a)
     
 eel.init("web")
