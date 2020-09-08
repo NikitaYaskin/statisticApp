@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Yaskin Nikita SoftWare Головний клієнт</title>
+  <title>Yaskin Nikita SoftWare Новий клієнт</title>
   <script src="eel.js"></script>
   <link rel="icon" type="image/png" href="/favicon.png">
   <style>@import "/style/main.css" screen;</style>
@@ -10,9 +10,15 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script> 
+  	function alert(){
+  		window.alert('Hi');
+  	}
+  </script>
 </head>
-<body onload="myFunction()">
+<body>
 	<a type="button" class="btn btn-light" href="main.html">Повернутися на головну</a>
+	<h2>Введіть данні нового клієнта</h2>
 	<form>
 		<div class="form-group">
 			<label>ІПН</label>
@@ -24,6 +30,9 @@
 			<label>ПІП</label>
 			<input type="text" name="name">
 			<br>
+			<label>Дата та час заповнення</label>
+			<input id="datetime" type="datetime-local">
+			<br>
 			<label>Дата та час отримання</label>
 			<input id="datetime" type="datetime-local">
 			<br>
@@ -32,15 +41,15 @@
 			<br>
 			<br>
 			<label>Назва продукту</label>
-			<select lass="form-control" id="exampleFormControlSelect1">
-			    <option>Кредит</option>
-			    <option>Blue</option>
-			    <option>White</option>
-			    <option>KK + White</option>
-			    <option>ГКД</option>
+			<select lass="form-control" id="selectorOfProduct">
+			    <option value="cash">Кредит</option>
+			    <option value="card-blue">Blue</option>
+			    <option value="card-white">White</option>
+			    <option value="cash-card">KK + White</option>
+			    <option value="paper">ГКД</option>
 			</select>
 			<br>
-			<input type="submit" value="Ввести">
+			<input type="submit" value="Зберегти" onclick=alert>
 		</div>
 	</form>
 </body>
