@@ -10,46 +10,65 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <script> 
+  <script>
   	function alert(){
-  		window.alert('Hi');
+  		alert('Hi');
   	}
   </script>
 </head>
 <body>
 	<a type="button" class="btn btn-light" href="main.html">Повернутися на головну</a>
 	<h2>Введіть данні нового клієнта</h2>
-	<form>
+	<form method="get">
 		<div class="form-group">
-			<label>ІПН</label>
-			<input type="text" name="identefication code">
-			<br>
-			<label>Номер телефону</label>
-			<input type="text" name="phone number">
-			<br>
-			<label>ПІП</label>
-			<input type="text" name="name">
-			<br>
-			<label>Дата та час заповнення</label>
-			<input id="datetime" type="datetime-local">
-			<br>
-			<label>Дата та час отримання</label>
-			<input id="datetime" type="datetime-local">
-			<br>
-			<label>Відділення</label>
-			<input type="text" name="department">
-			<br>
-			<br>
+      <div class="form-group row">
+  			<label class="col-sm-2 col-form-label">ІПН</label>
+        <div class="col-sm-5">
+  			<input type="text" name="identefication code" placeholder="ІПН">
+      </div>
+    </div>
+      <div class="form-group row">
+  			<label class="col-sm-2 col-form-label">Номер телефону</label>
+        <div class="col-sm-5">
+    			<input type="text" name="phone number" placeholder="Номер телефону">
+        </div>
+      </div>
+      <div class="form-group row">
+      			<label class="col-sm-2 col-form-label">ПІП</label>
+            <div class="col-sm-5">
+      			<input type="text" name="name" placeholder="ПІП">
+          </div>
+        </div>
+        <div class="form-group row">
+			<label class="col-sm-2 col-form-label">Дата та час заповнення</label>
+      <div class="col-sm-5">
+			<input id="datetime" type="datetime-local" placeholder="Дата та час заповнення">
+    </div>
+  </div>
+  <div class="form-group row">
+			<label class="col-sm-2 col-form-label">Дата та час отримання</label>
+      <div class="col-sm-5">
+			<input id="datetime" type="datetime-local" placeholder="Дата та час отримання">
+    </div>
+  </div>
+  <div class="form-group row">
+			<label class="col-sm-2 col-form-label">Відділення</label>
+      <div class="col-sm-5">
+			<input type="text" name="department" placeholder="Відділення">
+    </div>
+  </div>
+  <div class="col-auto my-1">
 			<label>Назва продукту</label>
-			<select lass="form-control" id="selectorOfProduct">
+			<select class="custom-select mr-sm-2" id="selectorOfProduct">
+        <option selected>Виберіть продукт..</option>
 			    <option value="cash">Кредит</option>
 			    <option value="card-blue">Blue</option>
 			    <option value="card-white">White</option>
 			    <option value="cash-card">KK + White</option>
 			    <option value="paper">ГКД</option>
 			</select>
-			<br>
-			<input type="submit" value="Зберегти" onclick=alert>
+    </div>
+			<input type="submit" value="Зберегти" onclick="alert">
 		</div>
 	</form>
 </body>

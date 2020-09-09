@@ -10,7 +10,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <script> 
+  <script>
   	function load(){
   		eel.load()
   	}
@@ -20,8 +20,8 @@
 		var table = document.getElementsByTagName('tbody')[0];
 		var row = table.insertRow(0);
 		row.innerHTML = param;
-    } 
-  </script> 
+    }
+  </script>
 </head>
 <body onload="load()">
 	<header><h2>Вітаю вас, Нікіта!</h2></header>
@@ -29,14 +29,13 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th>ІПН</th>
-					<th>Телефон</th>
-					<th>ПІП</th>
-					<th>Дата заповнення</th>
-					<th>Дата та час отримання</th>
-					<th>Відділення</th>
-					<th>Назва продукту</th>
-					<th>Чи скористався послугами?</th>
+					<th scope="col">ІПН</th>
+					<th scope="col">Телефон</th>
+					<th scope="col">ПІП</th>
+					<th scope="col">Дата та час отримання</th>
+					<th scope="col">Відділення</th>
+					<th scope="col">Назва продукту</th>
+					<th scope="col">Чи скористався послугами?</th>
 				</tr>
 			</thead>
 			<tbody>
